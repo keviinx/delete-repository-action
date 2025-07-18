@@ -11,9 +11,11 @@ async function run() {
     const owner = core.getInput('owner');
     const repo = core.getInput('name');
     const accessToken = core.getInput('token');
+    const githubAPIUrl = process.env.GITHUB_API_URL || 'https://api.github.com';
 
     const octokit = new Octokit({
-      auth: accessToken
+      auth: accessToken,
+      baseUrl: githubAPIUrl
     })
     
     await octokit.request('DELETE /repos/{owner}/{repo}', {
