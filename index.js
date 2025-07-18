@@ -13,6 +13,8 @@ async function run() {
     const accessToken = core.getInput('token');
     const githubAPIUrl = process.env.GITHUB_API_URL || 'https://api.github.com';
 
+    core.info(`githubAPIUrl: ${githubAPIUrl}`)
+
     const octokit = new Octokit({
       auth: accessToken,
       baseUrl: githubAPIUrl
