@@ -1,4 +1,4 @@
-name: "Delete Repository"
+name: "Repository Deleter"
 description: "Delete a repository from your workflows."
 inputs:
   owner:
