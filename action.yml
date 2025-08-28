@@ -1,15 +1,19 @@
-name: 'Delete Repository'
-description: 'Delete a repository from your workflows.'
+name: "Delete Repository"
+description: "Delete a repository from your workflows."
 inputs:
   owner:
-    description: 'github username or organization'
+    description: "github username or organization"
     required: true
   repo:
-    description: 'name of repository to delete'
+    description: "name of repository to delete"
     required: true
   token:
-    description: 'access token with repo scope'
+    description: "access token with repo scope"
     required: true
 runs:
-  using: 'node12'
-  main: 'dist/index.js'
+  using: "node12"
+  main: "dist/index.js"
+
+branding:
+  icon: "folder-minus"
+  color: "red"
